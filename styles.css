@@ -5,20 +5,26 @@
     margin: 0;
     padding: 0;
 }
+:root{
+    --bg-color:#1e2326;
+    --blue:#1CB698;
+    --white:#fff;
+    --bg2:#252A2E;
+    --bg3:#131517;
+}
 html{
-    /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
 /* MENU */
-.contenedor-header{
-    background: #1e2326;
+.container{
+    background: var(--bg-color);
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 99;
 }
-.contenedor-header header{
+.container header{
     max-width: 1100px;
     margin: auto;
     display: flex;
@@ -26,75 +32,76 @@ html{
     align-items: center;
     padding: 15px 20px;
 }
-.contenedor-header header .logo a{
+.container header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
-    color: #1CB698;
+    color: var(--blue);
     text-decoration: none;
 }
-.contenedor-header header ul{
+.container header ul{
     display: flex;
     list-style: none;
 }
-.contenedor-header header nav ul li a{
+.container header nav ul li a{
     text-align: none;
-    color: #fff;
+    color: var(--white);
     margin: 0 15px;
     padding: 3px;
     transition: .5s;
     text-decoration: none;
 }
-.contenedor-header header nav ul li a:hover{
-    color: #1CB698;
+.container header nav ul li a:hover{
+    color:var(--blue);
 }
 .nav-responsive{
-    background-color: #1CB698;
-    color:#fff;
+    background-color:var(--blue);
+    color:var(--white);
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     display: none;
 }
 /* SECCION I N I C I O */
-.inicio{
-    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg);
+.home{
+    background: linear-gradient(to top, rgba(30,35,38,0.95), rgba(30,35,38,0.9)),
+    url(img/sanika-collage.jpeg);
+    /* background-image:linear-gradient(180deg,rgba(20, 20, 20, 0.89),rgba(10, 12, 30,1)) ,url(img/sanika-collage.jpeg); */
     background-size: cover;
     height: 100vh;
-    color: #fff;
+    color: var(--white);
     display: flex;
     align-items: center;
 }
-.inicio .contenido-banner{
+.home .contenido-banner{
     padding: 20px;
-    background-color: #1e2326;
+    background-color:var(--bg-color);
     max-width: 350px;
     margin: auto;
     text-align: center;
     border-radius: 40px;
 }
-.inicio .contenido-banner img{
+.home .contenido-banner img{
     margin-top: 40px;
-    border: 10px solid #1CB698;
+    border: 10px solid var(--blue);
     display: block;
     width: 80%;
     margin: auto;
     border-radius: 100%;
 }
-.inicio .contenido-banner h1{
+.home .contenido-banner h1{
     margin-top: 40px;
     font-size: 42px;
     font-family: 'Righteous';
 }
-.inicio .contenido-banner h2{
+.home .contenido-banner h2{
     font-size: 15px;
     font-weight: normal;
 }
-.inicio .contenido-banner .redes a{
-    color: #fff;
+.home .contenido-banner .redes a{
+    color:var(--white);
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -103,71 +110,77 @@ html{
     font-size: 20px;
     transition: .3s;
 }
-.inicio .contenido-banner .redes a:hover{
-    background-color: #1CB698;
+.home .contenido-banner .redes a:hover{
+    background-color:var(--blue);
 }
-.sobremi{
-    background-color: #1e2326;
-    color: #fff;
+.about{
+    background-color:var(--bg-color);
+    color:var(--white);
     padding: 50px 20px;
 }
-.sobremi .contenido-seccion{
+.about .contenido-seccion{
     max-width: 1100px;
     margin: auto;
 }
-.sobremi h2{
+.about h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 
 }
-.sobremi .contenido-seccion p{
+.about .contenido-seccion p{
     font: 18px;
     line-height: 22px;
     margin-bottom: 20px;
 }
-.sobremi .contenido-seccion p span{
-    color: #1CB698;
+.about .contenido-seccion p span{
+    color:var(--blue);
     font-weight: bold;
 }
-.sobremi .fila{
+.about .fila{
     display: flex;
 }
-.sobremi .fila .col
+.about .fila .col
 {
     width: 50%;
+    /* border: solid 2px white; */
 }
-.sobremi .fila .col h3{
+.about .fila .col h3{
     font-size: 28px;
     font-family: 'Righteous';
     margin-bottom: 25px;
 }
-.sobremi .fila .col ul{
+.about .fila .col ul{
     list-style: none;
+    /* border: solid 2px white; */
 }
-.sobremi .fila .col ul li{
+.about .fila .col ul li{
     margin: 12px 0;
+    /* border: solid 2px white; */
+    display: flex;
+    gap:80px;
 }
-.sobremi .fila .col ul li strong{
+.about .fila .col ul li strong{
     display: inline-block;
-    color: #1CB698;
-    width: 130px;
+    color: var(--blue);
+    font-size: 17px;
+    width: 230px;
 }
-.sobremi .fila .col ul li span{
-    background-color: #1CB698;
+.about .fila .col ul li span{
+    background-color: var(--blue);
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
 }
-.sobremi .fila .col .contenedor-intereses{
+.about .fila .col .contenedor-intereses{
     display: flex;
     flex-wrap: wrap;
 }
-.sobremi .fila .col .contenedor-intereses .interes{
+.about .fila .col .contenedor-intereses .interes{
     width: 100px;
     height: 100px;
-    background-color: #252A2E;
+    background-color: var(--bg2);
     border-radius: 10px;
     margin: 0 15px 15px 0;
     display: flex;
@@ -175,43 +188,44 @@ html{
     align-items: center;
     justify-content: center;
     transition: .3s;
-}.sobremi .fila .col .contenedor-intereses .interes:hover{
-    background-color: #1CB698;
 }
-.sobremi .fila .col .contenedor-intereses .interes i{
+.about .fila .col .contenedor-intereses .interes:hover{
+    background-color: var(--blue);
+}
+.about .fila .col .contenedor-intereses .interes i{
     font-size: 30px;
     margin-bottom: 10px;
 }
-.sobremi button{
+.about button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--white);
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color:var(--white);
     position: relative;
     z-index: 10;
 }
-.sobremi button .overlay{
+.about button .overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color:var(--blue);
     z-index: -1;
     transition: 1s;
 }
-.sobremi button:hover .overlay{
+.about button:hover .overlay{
     width: 100%;
 }
 /* SECCION S K I L L S */
 .skills{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: var(--bg2);
+    color:var(--white);
     padding: 50px 20px;
 }
 .skills .contenido-seccion{
@@ -245,12 +259,12 @@ html{
 .skills .skill .barra-skill{
     height: 8px;
     width: 80%;
-    background-color: #131517;
+    background-color:var(--bg3);
     position: relative;
     margin-bottom: 30px;
 }
 .skills .skill .progreso{
-    background-color: #1CB698;
+    background-color: var(--blue);
     position: absolute;
     top: 0;
     left: 0;
@@ -260,7 +274,7 @@ html{
     position: absolute;
     height: 40px;
     width: 40px;
-    background-color: #1CB698;
+    background-color: var(--blue);
     border-radius: 50px;
     line-height: 40px;
     text-align: center;
@@ -360,8 +374,8 @@ html{
 }
 /* SECCION CURRICULUM */
 .curriculum{
-    background-color: #1e2326;
-    color: #fff;
+    background-color:var(--bg-color);
+    color: var(--white);
     padding: 50px 20px;
 }
 .curriculum .contenido-seccion{
@@ -389,15 +403,15 @@ html{
     margin-bottom: 25px;
 }
 .curriculum .fila .izquierda{
-    border-right: 2px solid #252A2E;
+    border-right: 2px solid var(--bg2);
 }
 .curriculum .fila .derecha{
-    border-left: 2px solid #252A2E;
+    border-left: 2px solid var(--bg2);
 }
 .curriculum .fila .item{
     padding: 25px;
     margin-bottom: 30px;
-    background-color: #252A2E;
+    background-color: var(--bg2);
     position: relative;
 }
 .curriculum .fila .item h4{
@@ -405,30 +419,30 @@ html{
     margin-bottom: 10px;
 }
 .curriculum .fila .item .casa{
-    color: #1CB698;
+    color:var(--blue);
     font-size: 22px;
     font-weight: bold;
     display: block;
 }
 .curriculum .fila .item .fecha{
     display: block;
-    color: #1CB698;
+    color:var(--blue);
     margin-bottom: 10px;
 }
 .curriculum .fila .item p{
     line-height: 24px;
 }
 .curriculum .fila .izq{
-    border-right: 2px solid #1CB698;
+    border-right: 2px solid var(--blue);
     margin-right: 20px;
 }
 .curriculum .fila .der{
-    border-left: 2px solid #1CB698;
+    border-left: 2px solid var(--blue);
     margin-left: 20px;
 }
 .curriculum .fila .item .conectori{
     height: 2px;
-    background-color: #1CB698;
+    background-color: var(--blue);
     width: 47px;
     position: absolute;
     top: 50%;
@@ -440,14 +454,14 @@ html{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
+    background-color: var(--blue);
     float: right;
     position: relative;
     bottom: 4px;
 }
 .curriculum .fila .item .conectord{
     height: 2px;
-    background-color: #1CB698;
+    background-color: var(--blue);
     width: 47px;
     position: absolute;
     top: 50%;
@@ -459,44 +473,44 @@ html{
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #1CB698;
+    background-color: var(--blue);
     float: left;
     position: relative;
     bottom: 4px;
 }
 /* SECCION PORTFOLIO */
-.portfolio{
-    background-color: #252A2E;
-    color: #fff;
+.projects{
+    background-color: var(--bg2);
+    color: var(--white);
     padding: 50px 20px;
 }
-.portfolio .contenido-seccion{
+.projects .contenido-seccion{
     max-width: 1100px;
     margin: auto;
 }
-.portfolio h2{
+.projects h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-.portfolio .galeria{
+.projects .galeria{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.portfolio .galeria .proyecto{
+.projects .galeria .project-card{
     position: relative;
-    max-width: 340px;
+    max-width: 640px;
     height: fit-content;
     margin: 10px;
     cursor: pointer;
 }
-.portfolio .galeria .proyecto img{
+.projects .galeria .project-card img{
     width: 100%;
     display: block;
 }
-.portfolio .galeria .proyecto .overlay{
+.projects .galeria .project-card .overlay{
     position: absolute;
     top: 0;
     width: 100%;
@@ -511,103 +525,107 @@ html{
     letter-spacing: 3px;
     opacity: 0;
 }
-.portfolio .galeria .proyecto .overlay h3{
+.projects .galeria .project-card .overlay h3{
     margin-bottom: 20px;
     transition: 1s;
 }
-.portfolio .galeria .proyecto .overlay:hover{
+.projects .galeria .project-card .overlay:hover{
     opacity: 1;
 }
-.portfolio .galeria .proyecto .overlay:hover h3{
+.projects .galeria .project-card .overlay:hover h3{
     margin-bottom: 0px;
 }
 /* SECCION CONTACTO */
-.contacto{
+.contact{
     background-image: url(img/contact_bg.png);
-    background-color: #1e2326;
-    color: #fff;
+    background-color:var(--bg-color);
+    color: var(--white);
+    /* border:solid 2px white; */
     padding: 50px 0;
 }
-.contacto .contenido-seccion{
+.contact .contenido-seccion{
     max-width: 1100px;
+    /* border:solid 2px white; */
     margin: auto;
 }
-.contacto h2{
+.contact h2{
     font-size: 48px;
     font-family: 'Righteous';
     text-align: center;
     padding: 20px 0;
 }
-.contacto .fila{
+.contact .fila{
     display: flex;
+    /* border:solid 2px white; */
+    justify-content: center;
 }
-.contacto .col{
+.contact .col{
     width: 50%;
     padding: 10px;
     position: relative;
 }
-.contacto .col input, .contacto .col textarea{
+.contact .col input, .contacto .col textarea{
     display: block;
     width: 100%;
     padding: 18px;
     border: none;
     margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
+    background-color: var(--bg2);
+    color: var(--white);
     font-size: 18px;
 }
-.contacto button{
+.contact button{
     cursor: pointer;
     background-color: transparent;
-    border: 2px solid #fff;
+    border: 2px solid var(--white);
     width: fit-content;
     display: block;
     margin: 20px auto;
     padding: 10px 22px;
     font-size: 16px;
-    color: #fff;
+    color: var(--white);
     position: relative;
     z-index: 10;
 }
-.contacto button .overlay{
+.contact button .overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background-color: #1CB698;
+    background-color: var(--blue);
     z-index: -1;
     transition: 1s;
 }
-.contacto button:hover .overlay{
+.contact button:hover .overlay{
     width: 100%;
 }
-.contacto .col img{
+.contact .col img{
     width: 100%;
 }
-.contacto .col .info{
+.contact .col .info{
     position: absolute;
     top: 40%;
-    background-color: #252A2E;
+    background-color: var(--bg2);
     padding: 20px;
-    max-swidth: 350px;
+    max-width: 350px;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.contacto .col .info ul{
+.contact .col .info ul{
     list-style: none;
 }
-.contacto .col .info ul li{
+.contact .col .info ul li{
     margin-bottom: 20px;
 }
-.contacto .col .info ul li i{
-    color: #1CB698;
+.contact .col .info ul li i{
+    color: var(--blue);
     display: inline-block;
     margin-right: 20px;
 }
 footer{
-    background-color: #252A2E;
-    color: #fff;
+    background-color: var(--bg2);
+    color: var(--white);
     padding: 50px 0 30px 0;
     text-align: center;
     position: relative;
@@ -617,10 +635,10 @@ footer .redes{
     margin-bottom: 20px;
 }
 footer .redes a{
-    color: #fff;
+    color: var(--white);
     display: inline-block;
     text-decoration: none;
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: 100%;
     width: 42px;
     height: 42px;
@@ -633,8 +651,8 @@ footer .arriba{
     display: block;
     width: 50px;
     height: 50px;
-    background-color: #1CB698;
-    color: #fff;
+    background-color: var(--blue);
+    color: var(--white);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -656,14 +674,14 @@ footer .arriba{
         position: absolute;
         right: 0;
         top: 75px;
-        background-color: #252A2E;
+        background-color: var(--bg2);
         width: 180px;
     }
     nav.responsive ul{
         display: block !important;
     }
     nav.responsive ul li{
-        border-bottom: 1px solid #fff;
+        border-bottom: 1px solid var(--white);
         padding: 10px 0;
     }
 }
@@ -699,10 +717,10 @@ footer .arriba{
         display: block;
         width: 100%;
     }
-    .portfolio .galeria .proyecto{
+    .portfolio .galeria .project-card{
         max-width: 100%;
     }
-    .portfolio .galeria .proyecto img{
+    .portfolio .galeria .project-card img{
         width: 100%;
     }
     .contacto .fila{
