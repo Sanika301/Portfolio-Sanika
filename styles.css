@@ -7,8 +7,8 @@
 }
 :root{
     --bg-color:#1e2326;
-    --blue:#1CB698;
-    --white:#fff;
+    --blue:#1cb6b6;
+    --white:#ffffff;
     --bg2:#252A2E;
     --bg3:#131517;
 }
@@ -130,7 +130,7 @@ html{
 
 }
 .about .contenido-seccion p{
-    font: 18px;
+    font-size: 20px;
     line-height: 22px;
     margin-bottom: 20px;
 }
